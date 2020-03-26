@@ -9,34 +9,57 @@ import android.widget.TextView;
 
 public class ScoreActivity extends AppCompatActivity {
 
-    TextView score;
+    TextView scoreA;
+   TextView scoreB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
 
-        score = (TextView) findViewById(R.id.Score);
+        scoreA = (TextView) findViewById(R.id.AScore);
+        scoreB = (TextView) findViewById(R.id.BScore);
     }
 
     public void btnAdd1(View btn){
-        showScore(1);
+        if(btn.getId()== R.id.score1) {
+            showScore(1);
+        } else{
+            showScore2(1);
+        }
     }
     public void btnAdd2(View btn){
-        showScore(2);
+        if(btn.getId()== R.id.score2) {
+            showScore(2);
+        } else{
+            showScore2(2);
+        }
+
     }
     public void btnAdd3(View btn){
-        showScore(3);
+        if(btn.getId()== R.id.score3) {
+            showScore(3);
+        } else{
+            showScore2(3);
+        }
     }
 
     public void btnReset(View btn){
-        score.setText("0");
+        scoreA.setText("0");
+        scoreB.setText("0");
     }
 
     private void showScore(int sc){
         Log.i("showScore","inc+"+sc);
-        String oddScore = (String)score.getText();
+        String oddScore = (String)scoreA.getText();
         int newScore = Integer.parseInt(oddScore)+sc;
-        score.setText(""+newScore);
+        scoreA.setText(""+newScore);
+    }
+
+    private void showScore2(int sc){
+        Log.i("showScore","inc+"+sc);
+        String oddScore = (String)scoreB.getText();
+        int newScore = Integer.parseInt(oddScore)+sc;
+        scoreB.setText(""+newScore);
     }
 }

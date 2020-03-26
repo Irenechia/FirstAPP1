@@ -17,26 +17,44 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.85"
-        android:onClick="btnReset"/>
+        android:onClick="btnReset"
+        app:layout_constraintVertical_bias="0.85" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_marginEnd="192dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/teamName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="30sp"
             android:layout_marginTop="60dp"
             android:layout_marginBottom="50dp"
-            android:text="@string/teamName" />
+            android:gravity="center"
+            android:text="@string/teamName1"
+            android:textSize="30sp" />
 
         <TextView
-            android:id="@+id/Score"
+            android:id="@+id/AScore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -45,33 +63,95 @@
 
         <Button
             android:id="@+id/score1"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="70dp"
-            android:background="@android:color/holo_orange_light"
             android:onClick="btnAdd1"
             android:text="@string/lab_1"
             android:textSize="20sp" />
 
         <Button
             android:id="@+id/score2"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:background="@android:color/holo_orange_light"
             android:onClick="btnAdd2"
             android:text="@string/lab_2"
             android:textSize="20sp" />
 
         <Button
             android:id="@+id/score3"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:background="@android:color/holo_orange_light"
             android:onClick="btnAdd3"
             android:text="@string/lab_3"
             android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="206dp"
+        android:layout_height="731dp"
+        android:layout_marginStart="192dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/teamName2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:text="@string/teamName2"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/BScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/first_score"
+            android:textSize="55sp" />
+
+        <Button
+            android:id="@+id/score4"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            android:onClick="btnAdd1"
+            android:text="@string/lab_1"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/score5"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:onClick="btnAdd2"
+            android:text="@string/lab_2"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/score6"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:onClick="btnAdd3"
+            android:text="@string/lab_3"
+            android:textSize="20sp" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

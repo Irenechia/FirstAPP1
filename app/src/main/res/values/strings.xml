@@ -4,7 +4,8 @@
     <string name="app_birthday">Happy Birthday</string>
     <string name="yours">From_IreneChia</string>
     <string name="to_name">To_Sherlok</string>
-    <string name="teamName">Team name</string>
+    <string name="teamName1">TeamA</string>
+    <string name="teamName2">TeamB</string>
     <string name="Score">Score</string>
     <string name="lab_1">+1 point</string>
     <string name="lab_2">+2 points</string>
