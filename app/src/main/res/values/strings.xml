@@ -17,6 +17,7 @@
     <string name="btn_Euro">Euro</string>
     <string name="btn_Won">Won</string>
     <string name="btn_Dollar">Dollar</string>
-    <string name="openOne">openScore</string>
+    <string name="config">config</string>
+    <string name="btn_save_lab">Save</string>
 
 </resources>
