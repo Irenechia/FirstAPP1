@@ -1,16 +1,19 @@
 package com.example.firstapp;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ScoreActivity extends AppCompatActivity {
 
     TextView scoreA;
-   TextView scoreB;
+    TextView scoreB;
+    public final String TAG  = "AppCompatActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +22,27 @@ public class ScoreActivity extends AppCompatActivity {
 
         scoreA = (TextView) findViewById(R.id.AScore);
         scoreB = (TextView) findViewById(R.id.BScore);
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState, @NonNull PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+        String scorea =((TextView) findViewById(R.id.AScore)).getText().toString() ;
+        String scoreb =((TextView) findViewById(R.id.BScore)).getText().toString();
+
+        outState.putString("teama_score",scorea);
+        outState.putString("teamb_score",scoreb);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        String scorea = savedInstanceState.getString("teama_score");
+        String scoreb = savedInstanceState.getString("teamb_score");
+
+        Log.i(TAG, "onRestoreInstanceState: ");
+        ((TextView) findViewById(R.id.AScore)).setText(scorea);
+        ((TextView) findViewById(R.id.BScore)).setText(scoreb);
     }
 
     public void btnAdd1(View btn){
