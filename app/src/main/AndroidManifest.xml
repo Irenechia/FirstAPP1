@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.firstapp">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,8 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ConfigActivity"></activity>
-        <activity android:name=".MoneyActivity">
+        <activity android:name=".MoneyActivity"/>
+        <activity android:name=".NewRateActivity" />
+        <activity android:name=".MyAdapterActivity" />
+        <activity android:name=".MyList2Activity" />
+        <activity android:name=".Mylist1Activity" />
+        <activity android:name=".RateListActivity" />
+        <activity android:name=".ConfigActivity" />
+        <activity android:name=".FindInfoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -19,5 +19,8 @@
     <string name="btn_Dollar">Dollar</string>
     <string name="config">config</string>
     <string name="btn_save_lab">Save</string>
+    <string name="lable_open_list">OpenList</string>
+    <string name="searchWord">请输入关键词</string>
+    <string name="find">查找</string>
 
 </resources>
