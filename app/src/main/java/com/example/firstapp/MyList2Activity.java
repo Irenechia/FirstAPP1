@@ -1,6 +1,8 @@
 package com.example.firstapp;
 
+import android.app.AlertDialog;
 import android.app.ListActivity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -146,8 +148,25 @@ public class MyList2Activity extends ListActivity implements Runnable, AdapterVi
     }
 
     @Override
-    public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+    public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
         Log.i(TAG, "onItemLongClick: 长按列表项position="+position);
-        return false;
+        //删除操作
+//        listItem.remove(position);
+//        listItemAdapter.notifyDataSetChanged();
+
+        //构造对话框进行确认操作
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("提示").setMessage("确认是否删除当前数据").setPositiveButton("是", new DialogInterface.OnClickListener() {
+            @Override//匿名对象创建
+            public void onClick(DialogInterface dialog, int which) {
+                Log.i(TAG, "onClick: 对话框事件处理");
+                listItem.remove(position);
+                listItemAdapter.notifyDataSetChanged();
+            }
+        }).setNegativeButton("否",null);
+
+        Log.i(TAG, "onItemLongClick: size="+listItem.size());
+        //false短按事件生效
+        return true;
     }
 }

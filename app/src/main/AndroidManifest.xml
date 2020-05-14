@@ -17,7 +17,7 @@
         <activity android:name=".MyAdapterActivity" />
         <activity android:name=".MyList2Activity" />
         <activity android:name=".Mylist1Activity" />
-        <activity android:name=".RateListActivity" />
+        <activity android:name=".RateListActivity" android:theme="@style/Theme.AppCompat.DayNight.Dialog"/>
         <activity android:name=".ConfigActivity" />
         <activity android:name=".FindInfoActivity">
             <intent-filter>
